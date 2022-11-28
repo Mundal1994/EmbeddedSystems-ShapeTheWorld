@@ -4,8 +4,10 @@ This is a collection of the assignments done through the labs in the course 'Emb
 
 The course is split into 2 parts:
 
+      Part 1
       Embedded Systems - Shape The World: Microcontroller Input/Output
-
+      
+      Part 2
       Embedded Systems - Shape The World: Multi-Threaded Interfacing
 
 
