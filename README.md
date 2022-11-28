@@ -5,12 +5,8 @@ This is a collection of the assignments done through the labs in the course 'Emb
 The course is split into 2 parts:
 
       Embedded Systems - Shape The World: Microcontroller Input/Output
-      - Introduction to the world of embedded systems with a focus on 
-      microcontroller input/output in this hands-on, lab-based course.
 
       Embedded Systems - Shape The World: Multi-Threaded Interfacing
-      - Build real-world embedded solutions using a bottom-up approach
-      from simple to complex in this hands-on, lab-based course.
 
 
 Assignments are made in the IDE ‘ARM Keil uVision’. Assignments consisted of a simulator and working with a TM4C123 Tiva LaunchPAD from Texas Instruments and additional lab kit
