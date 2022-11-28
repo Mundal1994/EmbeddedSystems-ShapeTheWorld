@@ -15,6 +15,8 @@ The course is split into 2 parts:
 
 Assignments are made in the IDE ‘ARM Keil uVision’. Assignments consisted of a simulator and working with a TM4C123 Tiva LaunchPAD from Texas Instruments and additional lab kit
 
+More info about the materiale covered can be found at this site: http://users.ece.utexas.edu/~valvano/Volume1/E-Book/
+
 
 ## PART 1
 
