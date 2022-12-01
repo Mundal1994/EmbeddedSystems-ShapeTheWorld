@@ -3,12 +3,8 @@
 This is a collection of the assignments done through the labs in the course 'Embedded Systems - Shape The World'
 
 The course is split into 2 parts:
-
-      Part 1
-      Embedded Systems - Shape The World: Microcontroller Input/Output
-      
-      Part 2
-      Embedded Systems - Shape The World: Multi-Threaded Interfacing
+- Embedded Systems - Shape The World: Microcontroller Input/Output
+- Embedded Systems - Shape The World: Multi-Threaded Interfacing
 
 
 Assignments are made in the IDE ‘ARM Keil uVision’. Assignments consisted of a simulator and working with a TM4C123 Tiva LaunchPAD from Texas Instruments and additional lab kit
