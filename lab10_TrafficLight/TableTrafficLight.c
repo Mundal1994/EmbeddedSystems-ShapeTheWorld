@@ -52,15 +52,16 @@ struct State {
 typedef const struct State STyp;
 	
 STyp FSM[12]={
-	{0x02,0x0C,10,{goW,goW,waitW,waitW,waitW,waitW,waitW,waitW}},
-	{0x02,0x14,10,{goS,goS,goS,goS,goWalk,goWalk,goS,goS}},
-	{0x02,0x21,10,{goS,waitS,goS,waitS,waitS,waitS,waitS,waitS}},
-	{0x02,0x22,10,{goW,goW,goW,goW,goWalk,goW,goWalk,goWalk}},
-	{0x08,0x24,10,{goWalk,on_1,on_1,on_1,goWalk,on_1,on_1,on_1}},//change to 100 when testing
+	{0x02,0x0C,20,{goW,goW,waitW,waitW,waitW,waitW,waitW,waitW}},
+	{0x02,0x14,30,{goS,goS,goS,goS,goWalk,goWalk,goS,goS}},
+	{0x02,0x21,20,{goS,waitS,goS,waitS,waitS,waitS,waitS,waitS}},
+	{0x02,0x22,30,{goW,goW,goW,goW,goWalk,goW,goWalk,goWalk}},
+	{0x08,0x24,20,{goWalk,on_1,on_1,on_1,goWalk,on_1,on_1,on_1}},//change to 100 when testing
 	{0x00,0x24,5,{off_1,off_1,off_1,off_1,off_1,off_1,off_1,off_1}},
 	{0x02,0x24,5,{on_2,on_2,on_2,on_2,on_2,on_2,on_2,on_2}},
 	{0x00,0x24,5,{off_2,off_2,off_2,off_2,off_2,off_2,off_2,off_2}},
 	{0x02,0x24,5,{on_3,on_3,on_3,on_3,on_3,on_3,on_3,on_3}},
+	{0x02,0x24,5,{off_3,off_3,off_3,off_3,off_3,off_3,off_3,off_3}},
 	{0x00,0x24,5,{all,all,all,all,all,all,all,all}},
 	{0x02,0x24,5,{goWalk,goW,goS,goW,goWalk,goW,goS,goW}}};
 
