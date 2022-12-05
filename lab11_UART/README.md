@@ -1,4 +1,4 @@
-# lab10_TrafficLight
+# lab11_UART
 
 ## Purpose
 
