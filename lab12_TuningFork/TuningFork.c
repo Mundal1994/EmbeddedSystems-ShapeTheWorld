@@ -48,47 +48,24 @@ unsigned long pressed = 0;
 
 // input from PA3, output from PA2, SysTick interrupts
 void Sound_Init(void){
-	/*unsigned long volatile delay;
-
-	SYSCTL_RCGC2_R |= 0x01;
-	delay = SYSCTL_RCGC2_R;
-	GPIO_PORTA_DEN_R &= ~0x08;
-	GPIO_PORTA_DIR_R &= ~0x08; // MAKE PA2 A OUTPUT
-	GPIO_PORTA_DIR_R |= 0x04; // MAKE PA3 A INPUT
-	GPIO_PORTA_AFSEL_R &= ~0x0C; //DIASBLE ALT FUNCTION ON PA2 AND PA3
-	//GPIO_PORTA_AFSEL_R &= ~0x08; //DIASBLE ALT FUNCTION ON PA2 AND PA3
-	//GPIO_PORTA_AFSEL_R &= ~0x04;
-	GPIO_PORTA_DEN_R |= 0x0C; // ENABLE DIGITAL I/O ON PA2 AND PA3
-	GPIO_PORTA_AMSEL_R &= ~0x08; /// DISABLE ANALOG FUNCTIONALITY OF PA
-	GPIO_PORTA_AMSEL_R &= ~0x04;
-	GPIO_PORTA_PCTL_R &= ~0x0000FF00;
-	NVIC_ST_CTRL_R = 0; // disable SysTick during setup
-	NVIC_ST_RELOAD_R = 90908; // reload value
-	NVIC_ST_CURRENT_R = 0; // any write to current clears it
-	NVIC_SYS_PRI3_R = (NVIC_SYS_PRI3_R&0x00FFFFFF)|0x40000000;
-	NVIC_ST_CTRL_R = 0x07;
-	
-	EnableInterrupts();
-	*/
-	
 	unsigned long volatile delay;
-  SYSCTL_RCGC2_R |= 0x01;//activate port A
+	SYSCTL_RCGC2_R |= 0x01;				//activate port A
 	delay = SYSCTL_RCGC2_R;
 	
-	GPIO_PORTA_AMSEL_R &= ~0x0C;      // disable analog on PA3 & PA2
-  GPIO_PORTA_PCTL_R &= 0x0000FF00;   // clear PCTL
-  GPIO_PORTA_DIR_R |= 0x04;         // output PA2
-	GPIO_PORTA_DIR_R &= ~0x08;				// input PA3
-	GPIO_PORTA_AFSEL_R &= ~0x0C;      // disable alt funct on PA3 & PA2
-  GPIO_PORTA_DEN_R |= 0x0C;         // enable digital I/O on PA3 & PA2
-	GPIO_PORTA_DATA_R &= 0xFB;        // Initialize sound to OFF
+	GPIO_PORTA_AMSEL_R &= ~0x0C;		// disable analog on PA3 & PA2
+	GPIO_PORTA_PCTL_R &= 0x0000FF00;	// clear PCTL
+	GPIO_PORTA_DIR_R |= 0x04;			// output PA2
+	GPIO_PORTA_DIR_R &= ~0x08;			// input PA3
+	GPIO_PORTA_AFSEL_R &= ~0x0C;		// disable alt funct on PA3 & PA2
+	GPIO_PORTA_DEN_R |= 0x0C;			// enable digital I/O on PA3 & PA2
+	GPIO_PORTA_DATA_R &= 0xFB;			// Initialize sound to OFF
 	
 	// SysTick interrupts
-	NVIC_ST_CTRL_R = 0;         // disable SysTick during setup
-  NVIC_ST_RELOAD_R = 90908;// reload value
-  NVIC_ST_CURRENT_R = 0;      // any write to current clears it
-  NVIC_SYS_PRI3_R = (NVIC_SYS_PRI3_R&0x00FFFFFF)|0x45000000;          
-  NVIC_ST_CTRL_R = 0x07; // enable SysTick with core clock and interrupts
+	NVIC_ST_CTRL_R = 0;					// disable SysTick during setup
+	NVIC_ST_RELOAD_R = 90908;			// reload value
+	NVIC_ST_CURRENT_R = 0;				// any write to current clears it
+	NVIC_SYS_PRI3_R = (NVIC_SYS_PRI3_R&0x00FFFFFF)|0x45000000;          
+	NVIC_ST_CTRL_R = 0x07;				// enable SysTick with core clock and interrupts
 }
 
 // called at 880 Hz
