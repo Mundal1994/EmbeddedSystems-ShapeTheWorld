@@ -5,7 +5,7 @@
 // Daniel Valvano, Jonathan Valvano
 // December 29, 2014
 
-#define NONE		0
+#define NONE	0
 #define PLAY_C	9555//80 Mz ___ 523,251Hz * len (wave_len) (ex 16)
 #define PLAY_D	8512//80 Mz ___ 587,330Hz * len (wave_len)
 #define PLAY_E	7583//80 Mz ___ 659,255Hz * len (wave_len)
